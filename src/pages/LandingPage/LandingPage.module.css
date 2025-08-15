@@ -1,0 +1,172 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://picsum.photos/1920/1080?random=nature') center/cover no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.companyName {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.brandParagraph {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaLink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.ctaLink button {
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
+  background-color: #4caf50;
+  border: 2px solid #4caf50;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.ctaLink button:hover,
+.ctaLink button:focus {
+  background-color: #45a049;
+  border-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .ctaLink button:hover,
+  .ctaLink button:focus {
+    transform: none;
+  }
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 1.5rem 1rem;
+  }
+  
+  .brandParagraph {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 1rem;
+  }
+  
+  .ctaLink button {
+    font-size: 1.125rem;
+    padding: 0.875rem 2rem;
+  }
+}
+
+.hero {
+  background: linear-gradient(rgba(76, 175, 80, 0.8), rgba(76, 175, 80, 0.8)),
+              url('/api/placeholder/1200/600') center/cover;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.features {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featuresTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #4caf50;
+}
+
+.featureDescription {
+  color: #666;
+  line-height: 1.6;
+}
