@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { store } from './app/store'
-import { Header } from './components/Header'
-import { LandingPage } from './pages/LandingPage'
-import { ProductListingPage } from './pages/ProductListingPage'
-import { CartPage } from './pages/CartPage'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import { Header } from './components/Header';
+import { LandingPage } from './pages/LandingPage';
+import { ProductListingPage } from './pages/ProductListingPage';
+import { CartPage } from './pages/CartPage';
+import './App.css';
 
 const AppContent = () => {
-  const location = useLocation()
-  const showHeader = location.pathname === '/products' || location.pathname === '/cart'
+  const location = useLocation();
+  const showHeader = location.pathname === '/products' || location.pathname === '/cart';
 
   return (
     <div className="app">
@@ -22,17 +22,17 @@ const AppContent = () => {
         </Routes>
       </main>
     </div>
-  )
-}
+  );
+};
 
 function App() {
   return (
     <Provider store={store}>
-      <Router basename="/paradise-nursery">
+      <Router basename={import.meta.env.BASE_URL}>
         <AppContent />
       </Router>
     </Provider>
-  )
+  );
 }
 
-export default App
+export default App;
