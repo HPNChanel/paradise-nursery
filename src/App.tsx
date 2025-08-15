@@ -28,7 +28,7 @@ const AppContent = () => {
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename="/paradise-nursery">
         <AppContent />
       </Router>
     </Provider>
